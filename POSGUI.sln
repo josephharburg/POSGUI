@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSGUI", "POSGUI\POSGUI.csproj", "{C033FE6C-579D-4379-9281-F5EED491BC69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C033FE6C-579D-4379-9281-F5EED491BC69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C033FE6C-579D-4379-9281-F5EED491BC69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C033FE6C-579D-4379-9281-F5EED491BC69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C033FE6C-579D-4379-9281-F5EED491BC69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87E66297-A402-483A-97CA-DBDFB4BE59BE}
+	EndGlobalSection
+EndGlobal

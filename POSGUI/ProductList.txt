@@ -1,0 +1,14 @@
+﻿Air Freshner,Home,Eliminate Smell,5.86
+Laptop,Electronics,Code stuff,499.99
+Toddleash,Children,Always know where jimmy is,54.99
+Cards Against Humanity,Games, Humourus adult card game,39.65
+DandD Starter Pack,Games,Learn Dungeons and Dragons,29.99
+InstaPot,Kitchen,Cook meals instantly with Instapot,4.99
+Fancy Couch,Furniture,Sit on your butt comfortably,300.50
+Study Desk,Furniture,Study your brain out,250.45
+Cordless Vacuum,Home,Suck crap off the floor,376.32
+KitchenAid,Kitchen,Make food more easily,300.23
+Gum,Food,Chew for flavor that lasts 1 minute,1.00
+Milk,Food,Udderly Delicious,3.23
+Time Machine,Other,Travel back to fix mistakes,100.00
+Yeti Trap, Outdoor, Trap the Yeti with this all inclusive kit!, 2.46

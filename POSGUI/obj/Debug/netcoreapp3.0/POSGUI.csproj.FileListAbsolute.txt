@@ -1,0 +1,17 @@
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\bin\Debug\netcoreapp3.0\POSGUI.exe
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\bin\Debug\netcoreapp3.0\POSGUI.deps.json
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\bin\Debug\netcoreapp3.0\POSGUI.runtimeconfig.json
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\bin\Debug\netcoreapp3.0\POSGUI.runtimeconfig.dev.json
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\bin\Debug\netcoreapp3.0\POSGUI.dll
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\bin\Debug\netcoreapp3.0\POSGUI.pdb
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\POSGUI.csprojAssemblyReference.cache
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\MainWindow.g.cs
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\App.g.cs
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\POSGUI_MarkupCompile.cache
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\POSGUI_MarkupCompile.lref
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\MainWindow.baml
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\POSGUI.g.resources
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\POSGUI.AssemblyInfoInputs.cache
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\POSGUI.AssemblyInfo.cs
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\POSGUI.dll
+C:\Users\josep\Desktop\coding\C#\POSGUI\POSGUI\obj\Debug\netcoreapp3.0\POSGUI.pdb
