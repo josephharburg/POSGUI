@@ -21,7 +21,7 @@ namespace POSGUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        Product trythis = new Product();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace POSGUI
             showlist.ItemsSource = Product.TextToList();
         }
 
-        private 
+        private
         class Product
         {
             public static List<Product> Products = TextToList();
@@ -37,8 +37,10 @@ namespace POSGUI
             public string Category { get; set; }
             public string Description { get; set; }
             public double Price { get; set; }
+
             public double Subtotal { get; set; }
             public double Quantity { get; set; }
+            public double Invetory { get; set; }
             public double GrandTotal { get; set; }
             public double Tax { get; set; }
             public static List<Product> SelectedItems = new List<Product>();
@@ -47,13 +49,15 @@ namespace POSGUI
             {
 
             }
-            public Product(string name, string category, string description, double price)
+            public Product(string name, string category, string description, double price, double invetory)
             {
                 Name = name;
                 Category = category;
                 Description = description;
                 Price = price;
+                Invetory = invetory;
             }
+
 
             public static void ListToText()
             {
@@ -61,7 +65,7 @@ namespace POSGUI
 
                 foreach (Product p in Products)
                 {
-                    sw.WriteLine($"{p.Name},{p.Category},{p.Description},{p.Price}");
+                    sw.WriteLine($"{p.Name},{p.Category},{p.Description},{p.Price},{p.Invetory}");
 
                 }
                 sw.Close();
@@ -87,8 +91,9 @@ namespace POSGUI
                     string[] par = item.Split(',');
 
                     double price = double.Parse(par[3]);
+                    double inv = double.Parse(par[4]);
 
-                    ProductList.Add(new Product(par[0], par[1], par[2], price));
+                    ProductList.Add(new Product(par[0], par[1], par[2], price, inv));
 
                 }
                 sr.Close();
@@ -101,27 +106,81 @@ namespace POSGUI
                 this.Subtotal = this.Quantity * this.Price;
             }
 
-            public double GetTax()
+
+
+            public static List<Product> GetGrandTotalAndTax()
             {
-                return GrandTotal * 0.06;
+                Product tempProduct = new Product();
+                foreach (Product p in SelectedItems)
+                {
+                    tempProduct.GrandTotal += p.Subtotal;
+
+                }
+
+                tempProduct.Tax = tempProduct.GrandTotal * 0.06;
+
+                return new List<Product> { tempProduct };
+
             }
-
-       
-
-
 
         }
 
 
         private void showlist_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Product hello = Product.Products[showlist.SelectedIndex];
-            if (!Product.SelectedItems.Contains(hello))
-            { Product.SelectedItems.Add(hello); }
-            hello.Quantity += 1;
-            hello.GetSubtotal();
-            cart.ItemsSource = Product.SelectedItems;
-            cart.Items.Refresh();
+            MessageBoxResult addItem = MessageBox.Show("Would you like to add this item?", "Add Item?", MessageBoxButton.YesNo);
+            if (addItem == MessageBoxResult.Yes)
+            {
+                Product hello = Product.Products[showlist.SelectedIndex];
+                if (hello.Invetory > 1)
+                {
+                    if (!Product.SelectedItems.Contains(hello))
+                    { Product.SelectedItems.Add(hello); }
+                    hello.Quantity += 1;
+                    hello.Invetory -= 1;
+                    hello.GetSubtotal();
+                    cart.ItemsSource = Product.SelectedItems;
+                    CheckingOut.ItemsSource = Product.GetGrandTotalAndTax();
+                }
+                else
+                {
+                    MessageBox.Show("Sorry that item is out of stock!");
+                }
+                Product.ListToText();
+                cart.Items.Refresh();
+            }
+
+        }
+
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Checkout(object sender, RoutedEventArgs e)
+        {
+            
+
+
+
+        }
+
+        private void cart_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            MessageBoxResult removeItem = MessageBox.Show("Would you like to remove this item from cart?", "Remove Item?", MessageBoxButton.YesNo);
+            if (removeItem == MessageBoxResult.Yes)
+            {
+                Product hello = Product.SelectedItems[cart.SelectedIndex];
+                Product.SelectedItems.Remove(hello);
+                hello.Quantity = 0;
+                hello.Invetory += 1;
+                cart.ItemsSource = Product.SelectedItems;
+                CheckingOut.ItemsSource = Product.GetGrandTotalAndTax();
+                Product.ListToText();
+                cart.Items.Refresh();
+                CheckingOut.Items.Refresh();
+            }
         }
     }
 }
